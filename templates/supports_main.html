@@ -1,0 +1,42 @@
+<script type="text/javascript">
+<!--
+function addSideBar(page)
+{ 
+	if ((typeof window.sidebar == "object") && (typeof window.sidebar.addPanel == "function"))
+	{
+		window.sidebar.addPanel ("<{$sitename}>","<{$module_url}>/"+page+".php?type=bar","");
+	}
+	else
+	{
+		var rv = window.confirm ("<{$erreur_mozilla}>");
+		if (rv) document.location.href = "http://www.mozilla.org/";
+	}
+}
+//-->
+</script>
+<h2><{$msn}></h2>
+<p><{$install_msn1}><br><br>
+<{$install_msn2}></p>
+<p><tt>&lt;tab&gt;<br>
+&lt;image&gt;<{$module_url}>/images/msn.png&lt;/image&gt;<br>
+&lt;name&gt;<{$sitename}>&lt;/name&gt;<br>
+&lt;tooltip&gt;<{$sitename}>: <{$slogan}>&lt;/tooltip&gt;<br>
+&lt;contenturl&gt;<{$module_url}>/supports.php&lt;/contenturl&gt;<br>
+&lt;hidden&gt;false&lt;/hidden&gt;<br>
+&lt;/tab&gt;</tt></p>
+
+<p><{$install_msn3}>:</p>
+<p><tt>&lt;tab&gt;<br>
+&lt;image&gt;<{$module_url}>/images/msn.png&lt;/image&gt;<br>
+&lt;name&gt;<{$sitename}>&lt;/name&gt;<br>
+&lt;tooltip&gt;<{$sitename}>: Forums&lt;/tooltip&gt;<br>
+&lt;contenturl&gt;<{$module_url}>/forum.php&lt;/contenturl&gt;<br>
+&lt;hidden&gt;false&lt;/hidden&gt;<br>
+&lt;/tab&gt;</tt></p>
+
+<h2><{$sidebar}></h2>
+<p><{$install_sidebar}><br>
+<div style="text-align:center"><a href="javascript:addSideBar('supports');"><{$active_sidebar1}></a><br>
+<a href="javascript:addSideBar('forum');"><{$active_sidebar2}></a></div></p>
+
+<p><address style="text-align:center">Turbinado pelo <a href="http://www.exploz.com/modules/mydownloads/singlefile.php?cid=14&lid=23">Supports</a> - <a href="http://www.exploz.com/">ExploZ.Com</a></address></p>
